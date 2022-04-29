@@ -20,6 +20,6 @@ class ApplicationController < ActionController::Base
     response = JSON.parse(http.request(request).body)
     embed_url_token = response['data']['token']
 
-    @embed_url = "http://localhost:3000/sso/embed?token=#{embed_url_token}"
+    @embed_url = "http://localhost:3000/sso?token=#{embed_url_token}"
   end
 end
